@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* GLOBALES 
+
+body {
+    background-image: url("../img/paven.png");
+}*/
+
+header {
+    width: 100%;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.bg-celeste {
+    background-color: #6e95c1;
+}
+
+
+/* DIVISAS */
+
+.titulo {
+    text-transform: capitalize;
+    text-shadow: rgba(17, 15, 15, 0.712);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.871);
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 575px) {
+    .color-menu {
+        background: #239ffe;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .color-menu {
+        background: rgb(255, 206, 8);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .color-menu {
+        background: rgb(149, 149, 149);
+    }
+}
