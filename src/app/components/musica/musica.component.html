@@ -4,69 +4,18 @@
     <!--CARDS-->
     <section class="col-sm-6 col-md-8 p-2">
         <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
-            <div class="col">
+            <div class="col" *ngFor="let t of tracks">
                 <div class="card h-100">
-                    <img src="../../../assets/img01.jpg" class="card-img-top" alt="Track 01">
+                    <img src="{{t.cover}}" class="card-img-top" alt="Track 01">
                     <div class="card-body">
                         <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">Big One</span><br>UN FINDE / CROSSOVER # 2</h5>
+                            <h5 class="card-title"><span class="text-danger">{{t.contributors}}</span><br>{{t.title}}</h5>
                         </a>
-                        <span class="card-text">Fifty One</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img02.webp" class="card-img-top" alt="Track 02">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">La T y la M</span><br>NO SE VA - SINGLE</h5>
-                        </a>
-                        <p class="card-text">Zelaya Producciones / FaroLatino Music</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img03.webp" class="card-img-top" alt="Track 03">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">Miranda!</span><br>PERFECTA</h5>
-                        </a>
-                        <span class="card-text">Sony Music Argentina</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img04.webp" class="card-img-top" alt="Track 04">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">Lali</span><br>LALI</h5>
-                        </a>
-                        <span class="card-text">Sony Music Argentina</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img05.webp" class="card-img-top" alt="Track 05">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">Nicki Nicole</span><br>QUÉ LE PASA CONMIGO?</h5>
-                        </a>
-                        <span class="card-text">DALE PLAY Records</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img06.webp" class="card-img-top" alt="Track 06">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title"><span class="text-danger">Farruko</span><br>ESTA VIDA</h5>
-                        </a>
-                        <span class="card-text">Sony Music Latin</span>
+                        <span class="card-text">{{t.album}}</span>
+                        <br><br>
+                        <audio class="col-12 mx-auto" controls>
+                            <source src="{{t.preview}}" type="audio/mp3">
+                        </audio>
                     </div>
                 </div>
             </div>

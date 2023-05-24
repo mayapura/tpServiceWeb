@@ -4,239 +4,40 @@
 
     <!--PRIMERA SECCION-->
 
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
+    <div class="col-md-4 col-xs-6 col-6 pt-3" *ngFor="let s of signos">
         <div class="d-flex justify-content-around">
-            <img src="../../../assets/aries-1.png" class="mt-1" width="65" height="65" alt="">
             <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Aries</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/leo-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Leo</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/sagittarius-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Sagitario</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/taurus-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Tauro</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/virgo-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Virgo</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/capricornus-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Capricornio</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/gemini-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Geminis</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/libra-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Libra</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/aquarius-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Acuario</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/cancer-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Cancer</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/scorpio-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Escorpio</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-6 col-6 pt-3">
-        <div class="d-flex justify-content-around">
-            <img src="../../../assets/pisces-1.png" class="mt-1" width="65" height="65" alt="">
-            <div class="container-sm pt-2">
-                <div class="alert alert-primary" role="alert">
-                    <h5>Picis</h5>
-                </div>
+                <button class="btn btn-primary col-12 d-flex justify-content-center my-auto py-auto" (click)="getHoroscopo(s)">
+                    <div class="col-3">
+                        <img src="../../../assets/{{s}}-1.png" class="mt-1" width="65" height="65" alt="">
+                    </div>
+                    <h5 class="col-5 my-auto">{{s}}</h5>
+                </button>
             </div>
         </div>
     </div>
 
     <!--SEGUNDA SECCION-->
 
-    <section class="mt-5">
+    <section class="mt-5" *ngIf="mostrar">
         <div class="card mb-12 cuerpo-Card">
             <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
                 <div class="row no-gutters">
                     <div class="col-md-2">
                         <div class="m-md-3">
-                            <img src="../../../assets/aries.png" width="30" height="100" class="card-img" alt="...">
+                            <img src="../../../assets/{{signo}}.png" width="30" height="100" class="card-img" alt="...">
                         </div>
                     </div>
                     <div class="col-md-10">
                         <div class="card-body">
-                            <h5 class="card-title">Aries</h5>
-                            <p class="card-text">Aproveche este momento para ampliar sus metas y afrontar los diferentes desafíos en su vida cotidiana. Arriésguese por más que tenga que perder algo.</p>
+                            <h5 class="card-title">{{signo}}</h5>
+                            <p class="card-text">{{horoscopo.text}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <br>
-        <div class="card mb-12 cuerpo-Card">
-            <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
-                <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <div class="m-md-3">
-                            <img src="../../../assets/taurus.png" width="30" height="100" class="card-img" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Tauro</h5>
-                            <p class="card-text">Evite tener miedo a caer y volver a empezar por más que sus esfuerzos se vean limitados para obtener nuevos intereses. Muchas veces de los errores aprendemos cosas nuevas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="card mb-12 cuerpo-Card">
-            <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
-                <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <div class="m-md-3">
-                            <img src="../../../assets/gemini.png" width="30" height="100" class="card-img" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Géminis</h5>
-                            <p class="card-text">Transitará por un período de dudas en las amistades y cierto negativismo con la gente que lo rodea. Momento de conocer gente nueva y cambiar el entorno.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="card mb-12 cuerpo-Card">
-            <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
-                <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <div class="m-md-3">
-                            <img src="../../../assets/aquarius.png" width="30" height="100" class="card-img" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Acuario</h5>
-                            <p class="card-text">Durante esta jornada se enfrentará a un desafío muy importante que pondrá a prueba su vocación y compromiso profesional. Escoja el camino correcto.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="card mb-12 cuerpo-Card">
-            <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
-                <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <div class="m-md-3">
-                            <img src="../../../assets/leo.png" width="30" height="100" class="card-img" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Leo</h5>
-                            <p class="card-text">Intente poner al día todas las obligaciones que tiene pendientes. Esto lo ayudará a ordenar sus ideas y a conectarse con el verdadero sentido de la vida.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="card mb-12 cuerpo-Card">
-            <div class="card mb-12 border-info cuerpo-Card" style="background-color: rgba(128, 200, 176, 0.39);">
-                <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <div class="m-md-3">
-                            <img src="../../../assets/pisces.png" width="30" height="100" class="card-img" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Picis</h5>
-                            <p class="card-text">Anímese y emprenda algo nuevo donde se sentirá gratificado. Gracias a su gran lucidez podrá realizar algunos cambios positivos en su vida cotidiana.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 </div>
 <br><br><br><br>

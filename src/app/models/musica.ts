@@ -1,13 +1,17 @@
 export class Musica {
-    musica_id!:number;
-    portada!:string;
-    nombre!:string;
-    autores!:Array<String>;
+    id!:string;
+    cover!:string;
+    title!:string;
+    contributors!:Array<String>;
+    album!:string;
+    preview!:string;
 
-    constructor(musica_id:number,portada:string, nombre:string,autores:Array<String>){
-        this.musica_id=musica_id;
-        this.portada=portada;
-        this.nombre=nombre;
-        this.autores=autores;
+    constructor(id:string="",cover:string="", title:string="",contributors:Array<String>=[], album:string="", preview:string=""){
+        this.id = id;
+        this.cover = cover;
+        this.title = title;
+        this.contributors = contributors;
+        this.album = album;
+        this.preview = preview;
     }
 }
